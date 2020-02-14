@@ -1,0 +1,22 @@
+Author: Lorenzo Pedroni
+Date: 14/02/2020
+
+- Import the dictionary we will use to assign values to our alignment. Import the two sequences too. 
+
+- Define a function taking as parameters the two sequences (s1, s2), the dictionary(s_scheme) and the gap penalty (gap). First of all we initialize the two matrices with all zeros in order to fill them up later on. The first matrix will be the scoring one while the second one will be the traceback matrix where we'll save the "moves". 
+
+- The scoring matrix must have the first column and first row with gap penalties, we'll do this using two for cycles, one for the row and one for the column. 
+
+- Inside the same function defined before we do the iteration step in order to fill up both matrices. We'll use two for cycles again, we'll define 3 scores (if we move "left", "up" or "diagonal") and save in the matrix the max of the 3. inside the two for cycles, imposing conditions using if, we'll fill up also the traceback matrix (i.e. if max==sL → M[i][j]="l").
+
+- The function will return a list of two lists, the first one is the scoring matrix, the second one is the traceback one. 
+
+- We store them in a variable and we split them in two distinc variables.
+
+- Now we can define a new function, taking as parameters a matrix (the traceback one), both sequences and the score, able to print the alignment and the score. The score is the value in bottom right corner of the scoring matrix.
+
+- Inside the function we define two void strings to fill them up with the alignment and as starting point we take the bottom right corner of the matrix. Until the top left corner isn't reached we continue to fill up the alignment (we use a while loop in order to do that). 
+
+- The function will finally print the alignment and the corresponding score. 
+
+
